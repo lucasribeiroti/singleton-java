@@ -18,13 +18,13 @@ public class RegistroUsuarioTest {
 
     @Test
     public void testRegistrarUsuarioComIPv4Valido() {
-        boolean result = registroUsuario.registerUser("Lucas", "192.168.1.1");
+        boolean result = registroUsuario.registrarUsuario("Lucas", "192.168.1.1");
         assertTrue(result, "O IP 192.168.1.1 deveria ser considerado válido e o registro deveria ser bem-sucedido.");
     }
 
     @Test
     public void testRegistrarUsuarioComIPv4Invalido() {
-        boolean result = registroUsuario.registerUser("Lucas", "256.256.256.256");
+        boolean result = registroUsuario.registrarUsuario("Lucas", "256.256.256.256");
         assertFalse(result, "O IP 256.256.256.256 deveria ser considerado inválido e o registro deveria falhar.");
     }
 }

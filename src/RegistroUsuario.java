@@ -8,12 +8,12 @@ public class RegistroUsuario {
         this.validadorIP = ValidadorIP.getInstance();
     }
 
-    public boolean registerUser(String username, String ipAddress) {
-        if (validadorIP.isValidIPv4(ipAddress)) {
-            System.out.println("Usuário " + username + " registrado com IP " + ipAddress);
+    public boolean registrarUsuario(String nome, String enderecoIP) {
+        if (validadorIP.isValidIPv4(enderecoIP)) {
+            System.out.println("Usuário " + nome + " registrado com IP " + enderecoIP);
             return true;
         }else {
-            System.out.println("IP inválido: " + ipAddress);
+            System.out.println("IP inválido: " + enderecoIP);
             return false;
         }
     }
