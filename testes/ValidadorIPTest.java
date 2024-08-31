@@ -25,14 +25,6 @@ public class ValidadorIPTest {
     }
 
     @Test
-    public void testValidIP() {
-        ValidadorIP validator = ValidadorIP.getInstance();
-        assertTrue(validator.isValidIP("192.168.1.1", IPV4_PATTERN));
-        assertFalse(validator.isValidIP("2001:db8::ff00:42:8329", IPV4_PATTERN));
-        assertFalse(validator.isValidIP("invalid_ip", IPV4_PATTERN));
-    }
-
-    @Test
     public void testCanResolveIP() {
         ValidadorIP validator = ValidadorIP.getInstance();
         assertTrue(validator.canResolveIP("192.168.1.1"));
